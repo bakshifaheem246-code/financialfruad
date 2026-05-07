@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAFE WEB PRO</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= LOGIN / SIGNUP ================= -->
+
+<div class="auth-container" id="authContainer">
+
+<div class="auth-box">
+
+<h1>SAFE WEB PRO</h1>
+
+<p>
+Advanced Financial Fraud Awareness Platform
+</p>
+
+<div class="tabs">
+
+<button onclick="showLogin()">
+Login
+</button>
+
+<button onclick="showSignup()">
+Signup
+</button>
+
+</div>
+
+<!-- LOGIN -->
+
+<form id="loginForm">
+
+<input type="text" id="loginUsername" placeholder="Enter Username" required>
+
+<input type="password" id="loginPassword" placeholder="Enter Password" required>
+
+<button type="submit">
+Login
+</button>
+
+</form>
+
+<!-- SIGNUP -->
+
+<form id="signupForm" style="display:none;">
+
+<input type="text" id="signupUsername" placeholder="Create Username" required>
+
+<input type="email" id="signupEmail" placeholder="Enter Email" required>
+
+<input type="password" id="signupPassword" placeholder="Create Password" required>
+
+<button type="submit">
+Signup
+</button>
+
+</form>
+
+<p id="message"></p>
+
+</div>
+
+</div>
+
+<!-- ================= WEBSITE ================= -->
+
+<div id="website" style="display:none;">
+
+<!-- NAVBAR -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+SAFE WEB PRO
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#features">Features</a></li>
+
+<li><a href="#fraud">Fraud Checker</a></li>
+
+<li><a href="#scanner">Number Scanner</a></li>
+
+<li><a href="#quiz">Quiz</a></li>
+
+<li><a href="#team">Team</a></li>
+
+<li><a href="#chat">AI Assistant</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>Financial Fraud Awareness</h1>
+
+<p>
+Protect yourself from phishing attacks,
+online scams, fake banking calls,
+fraudulent messages and cyber crimes.
+</p>
+
+<button onclick="scrollToAbout()">
+Explore Website
+</button>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="title">
+
+<h2>About Our Project</h2>
+
+</div>
+
+<div class="about-container">
+
+<div class="about-text">
+
+<p>
+SAFE WEB PRO is a professional cyber security
+awareness platform developed as a Service Learning Project
+by BSc IT students.
+</p>
+
+<p>
+The purpose of this project is to educate people
+about financial frauds, online scams,
+phishing attacks, fake calls and suspicious links.
+</p>
+
+<p>
+Every year millions of users lose their money
+because they unknowingly share OTPs,
+bank details and passwords with fraudsters.
+</p>
+
+<p>
+Our platform helps users identify suspicious activity,
+analyze scam messages and improve cyber awareness
+through interactive features.
+</p>
+
+<p>
+The website includes:
+</p>
+
+<ul>
+
+<li>AI Fraud Prevention Assistant</li>
+
+<li>Advanced Fraud Message Detection</li>
+
+<li>Fraud Number Scanner</li>
+
+<li>Cyber Security Quiz</li>
+
+<li>Online Safety Guidance</li>
+
+<li>Fraud Reporting Awareness</li>
+
+</ul>
+
+<p>
+SAFE WEB PRO promotes safe digital practices
+and helps users stay secure online.
+</p>
+
+</div>
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features" id="features">
+
+<div class="title">
+
+<h2>Website Features</h2>
+
+</div>
+
+<div class="feature-container">
+
+<div class="feature-box">
+
+<h3>Fraud Detection</h3>
+
+<p>
+Detect suspicious banking messages,
+fake offers and phishing links instantly.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>AI Assistant</h3>
+
+<p>
+Chat with AI for cyber security advice
+and online safety guidance.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>Number Scanner</h3>
+
+<p>
+Check suspicious mobile numbers
+and identify fraud alerts.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>Cyber Quiz</h3>
+
+<p>
+Improve cyber awareness through
+interactive quiz questions.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>Secure Login</h3>
+
+<p>
+Signup and login system with validation
+for secure access.
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>Awareness Education</h3>
+
+<p>
+Learn safe online banking and
+secure digital practices.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FRAUD CHECKER -->
+
+<section class="fraud" id="fraud">
+
+<div class="title">
+
+<h2>Advanced Fraud Checker</h2>
+
+</div>
+
+<div class="fraud-box">
+
+<p>
+Paste suspicious message, SMS,
+WhatsApp text or email below.
+</p>
+
+<textarea id="fraudInput" rows="8" placeholder="Paste suspicious message here..."></textarea>
+
+<button onclick="checkFraud()">
+Analyze Message
+</button>
+
+<div id="fraudResult"></div>
+
+</div>
+
+</section>
+
+<!-- NUMBER SCANNER -->
+
+<section class="scanner" id="scanner">
+
+<div class="title">
+
+<h2>Fraud Number Scanner</h2>
+
+</div>
+
+<div class="scanner-box">
+
+<p>
+Enter suspicious phone number below.
+</p>
+
+<input type="text" id="phoneInput" placeholder="Enter Mobile Number">
+
+<button onclick="scanNumber()">
+Scan Number
+</button>
+
+<div id="phoneResult"></div>
+
+</div>
+
+</section>
+
+<!-- QUIZ -->
+
+<section class="quiz" id="quiz">
+
+<div class="title">
+
+<h2>Cyber Security Quiz</h2>
+
+</div>
+
+<div class="quiz-box">
+
+<h3 id="question">
+Loading...
+</h3>
+
+<div class="quiz-buttons">
+
+<button onclick="checkAnswer(0)" id="btn0"></button>
+
+<button onclick="checkAnswer(1)" id="btn1"></button>
+
+<button onclick="checkAnswer(2)" id="btn2"></button>
+
+<button onclick="checkAnswer(3)" id="btn3"></button>
+
+</div>
+
+<div id="quizResult"></div>
+
+<div id="scoreBoard">
+Score: 0
+</div>
+
+</div>
+
+</section>
+
+<!-- TEAM -->
+
+<section class="team" id="team">
+
+<div class="title">
+
+<h2>Developer</h2>
+
+</div>
+
+<div class="team-container">
+
+<div class="team-box">
+
+<img src="1000000394.jpg">
+
+<h3>Faheem Ul Altaf</h3>
+
+<p class="role">
+Developer
+</p>
+
+<p>
+Frontend Development,
+AI Integration and Cyber Awareness Research.
+</p>
+
+
+
+<p>
+Cyber Security Research,
+Quiz Content and Awareness Material.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AI CHAT -->
+
+<section class="chat-section" id="chat">
+
+<div class="title">
+
+<h2>Fraud Prevention AI Assistant</h2>
+
+</div>
+
+<div class="chat-open-box">
+
+<p>
+Get instant cyber security guidance
+through our AI Assistant.
+</p>
+
+<button onclick="openChat()">
+Open AI Assistant
+</button>
+
+</div>
+
+</section>
+
+<!-- CHAT BOX -->
+
+<div class="chat-box" id="chatBox">
+
+<div class="chat-header">
+
+SAFE WEB AI
+
+<span onclick="closeChat()">
+✖
+</span>
+
+</div>
+
+<div class="chat-body" id="chatBody">
+
+<div class="bot">
+Hello 👋<br>
+I am SAFE WEB AI Assistant.<br>
+Ask me anything about cyber security.
+</div>
+
+</div>
+
+<div class="chat-footer">
+
+<input type="text" id="userInput" placeholder="Ask question...">
+
+<button onclick="sendMessage()">
+Send
+</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>SAFE WEB PRO</h3>
+
+<p>
+Advanced Cyber Security Awareness Platform
+</p>
+
+<p>
+Service Learning Project 2026
+</p>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
